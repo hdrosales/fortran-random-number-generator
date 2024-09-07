@@ -35,11 +35,11 @@ PROGRAM randomHDR
         suma = suma + rand1
     end do
     avg = suma / real(ns, 8)
-    print *, 'Averaged (it souldf be very close to 0.5): ', avg
+    print *, 'Averaged (it should be very close to 0.5): ', avg
     
     
     !=========================================================
-    ! Chi square test
+    ! Chi-square test
     !=========================================================
     counts = 0
     bin_width = 1.0 / real(num_bins)
@@ -94,7 +94,7 @@ PROGRAM randomHDR
     corr = (suma_xy - suma_x * suma_y /real(ns,8))&
             /dsqrt( (suma_x2 - suma_x*suma_x/ real(ns,8))*(suma_y2-suma_y*suma_y/real(ns,8)) )
 
-    write(*,'(A,f15.8)') 'Correlation (it sould be almost zero): ', corr
+    write(*,'(A,f15.8)') 'Correlation (it should be almost zero): ', corr
     
 END PROGRAM randomHDR
 
